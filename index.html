@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Web Lab 1</title>
+    <title>Web Lab 2</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> Web Lab 1
+          <a href="." class="icon icon-home"> Web Lab 2
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -45,39 +45,6 @@
     </ul>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">first_task</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="first_task/client/">client</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="first_task/server/">server</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">second_task</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="second_task/client/">client</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="second_task/server/">server</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">third_task</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="third_task/server/">server</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="third_task/index_html/">index_html</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">fourth_task</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="fourth_task/client/">client</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="fourth_task/server/">server</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">fifth_task</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="fifth_task/server/">server</a>
-                  </li>
-              </ul>
       </div>
     </div>
     </nav>
@@ -85,7 +52,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">Web Lab 1</a>
+          <a href=".">Web Lab 2</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -101,13 +68,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="no1">Лабораторная работа №1</h1>
+                <h2 id="no2">Лабораторная работа №2</h2>
+<h1 id="_1">Функции</h1>
+<ul>
+<li>Приложение Hotels может регистрировать новых пользователей и позволяет им заходить в свой аккаунт. </li>
+<li>Пользователь имеет доступ к списку отелей, комнатам этих отелей и отзывам на них. </li>
+<li>Пользователь имеет возможность смотреть свои бронирования, создавать новые, изменять и удалять их.</li>
+<li>Пользователь может оставлять отзывы о проживании.</li>
+</ul>
+<h1 id="_2">Модели</h1>
+<ul>
+<li>Hotel: <em>name, owner, address, description</em></li>
+<li>Room: <em>hotel (fk), room type, price, capacity, description</em></li>
+<li>Reservation: <em>user (fk), room (fk), start date, end date</em></li>
+<li>Review: <em>reservation (fk), review, rate</em></li>
+</ul>
+<h1 id="_3">Начало работы</h1>
+<ul>
+<li>Команда запуска сервера: <code>python manage.py runserver</code></li>
+<li>Ссылка на регистрацию: <a href="http://127.0.0.1:8000/signup/">http://127.0.0.1:8000/signup/</a></li>
+</ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="first_task/client/" class="btn btn-neutral float-right" title="client">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -130,8 +113,6 @@
     
     
     
-      <span><a href="first_task/client/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
   </span>
 </div>
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -150,5 +131,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-12-26 14:27:03.062558+00:00
+Build Date UTC : 2025-01-18 17:29:13.383193+00:00
 -->
