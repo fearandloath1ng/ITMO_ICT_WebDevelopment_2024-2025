@@ -46,15 +46,19 @@ class MyHTTPServer:
         grade = parsed_body.get('grade', [''])[0]
 
         if discipline and grade:
-            self.data[discipline] = grade
+            if discipline in self.data:
+                self.data[discipline].append(grade) 
+            else:
+                self.data[discipline] = [grade]  
             return self.send_response('200 OK', 'Data received')
         else:
             return self.send_response('400 Bad Request', 'Invalid data')
-
+    
     def handle_get(self):
         html_content = '<html><body><h1>Grades</h1><ul>'
-        for discipline, grade in self.data.items():
-            html_content += f'<li>{discipline}: {grade}</li>'
+        for discipline, grades in self.data.items():
+            grades_list = ', '.join(grades)  
+            html_content += f'<li>{discipline}: {grades_list}</li>'
         html_content += '</ul></body></html>'
         return self.send_response('200 OK', html_content)
 

@@ -18,7 +18,7 @@ def start_server():
         request = client_socket.recv(buffer_size).decode('utf-8')
         print(f"Получен запрос:\n{request}")
 
-        with open('index.html', 'r', encoding='utf-8') as f:
+        with open('/Users/user/Desktop/учеба/git/ITMO_ICT_WebDevelopment_2024-2025/students/k3339/Binov_Daniil/Lr1/Lab1/third_task/index.html', 'r', encoding='utf-8') as f:
             html_content = f.read()
 
         response = f"HTTP/1.1 200 OK\r\n"

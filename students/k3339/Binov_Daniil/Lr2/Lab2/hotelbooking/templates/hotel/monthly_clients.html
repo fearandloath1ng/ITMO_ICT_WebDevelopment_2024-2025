@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-2">Clients for the last month</h2>
+
+    {% if user.is_staff %}
+        {% for booking in bookings_month %}
+            <li>Client: {{ booking.user.username}}</li>
+
+        {% empty %}
+            <h5 class="mb-4">No bookings for this hotel</h5>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p class="lead text-center"><u>Only for staff</u></p>
+
+    {% endif %}
+
+{% endblock %}

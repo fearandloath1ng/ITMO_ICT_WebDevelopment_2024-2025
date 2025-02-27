@@ -1,5 +1,0 @@
-site_name: Web Lab 2
-nav:
- - Home: index.md
-theme:
-  name: readthedocs

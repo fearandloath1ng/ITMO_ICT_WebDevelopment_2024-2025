@@ -19,14 +19,17 @@ class UserRegistrationForm(UserCreationForm):
         return user
 
 class ReservationForm(forms.ModelForm):
+    start_date = forms.DateField(input_formats=['%Y-%m-%d'])
+    end_date = forms.DateField(input_formats=['%Y-%m-%d'])
+    
     class Meta:
         model = Reservation
-        fields = {'room', 'start_date', 'end_date'}
+        fields = {'start_date', 'end_date'}
 
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = {'reservation', 'review', 'rate'}
+        fields = {'review', 'rate'}
         widgets = {
             'rate': forms.NumberInput(attrs={'min': 1, 'max': 10}),
         }
