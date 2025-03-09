@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Реализация фронтэнда на основе 3 лабораторной работы - Web Lab Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u0420\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f \u0444\u0440\u043e\u043d\u0442\u044d\u043d\u0434\u0430 \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0435 3 \u043b\u0430\u0431\u043e\u0440\u0430\u0442\u043e\u0440\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b";
+        var mkdocs_page_input_path = "lab4/lab4.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Lab Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">first_task</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../first_task/client/">client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../first_task/server/">server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">second_task</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../second_task/client/">client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../second_task/server/">server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">third_task</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../third_task/server/">server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../third_task/index_html/">index_html</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">fourth_task</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../fourth_task/client/">client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../fourth_task/server/">server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">fifth_task</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../fifth_task/server/">server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">lab2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/lab2/">models and functions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">lab3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practice/">practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/api/">API</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Lab Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Реализация фронтэнда на основе 3 лабораторной работы</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="3">Реализация фронтэнда на основе 3 лабораторной работы</h1>
+<h3 id="cors-django-rest-framework">Настройка CORS в Django REST framework</h3>
+<p>Установка django-cors-headers:</p>
+<pre><code>pip install django-cors-headers
+</code></pre>
+<p>Затем обновляем settings.py:  </p>
+<pre><code>INSTALLED_APPS = (
+    ##...
+    'corsheaders'
+)
+</code></pre>
+<p>HTTP-запросы отправляем на сервер с помощью библиотеки axios. </p>
+<pre><code class="language-python">import axios from 'axios';
+
+const apiClient = axios.create({
+  baseURL: 'http://127.0.0.1:8000/', 
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+apiClient.interceptors.request.use(
+  (config) =&gt; {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Token ${token}`;
+    }
+    return config;
+  },
+  (error) =&gt; Promise.reject(error)
+);
+
+export default apiClient;
+</code></pre>
+<h3 id="vue">Реализация интерфейсов .vue</h3>
+<p>Под тэгом <template> указан шаблон элементов страницы.</p>
+<p>Под тэгом <script> приведены функции и методы, которые необходимо вызвать в различных кейсах (при загрузке страницы, при нажатии на определенную кнопку и т.д.)</p>
+<p>Под тэгом <style> перечислены стили элементов.</p>
+<p>Для примера:</p>
+<p>Crews.vue - список всех экипажей.</p>
+<pre><code class="language-vue">&lt;template&gt;
+    &lt;v-container&gt;
+      &lt;v-row&gt;
+        &lt;v-col cols=&quot;12&quot;&gt;
+          &lt;h1 class=&quot;text-center&quot;&gt;Crews list&lt;/h1&gt;
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+
+      &lt;v-row&gt;
+        &lt;v-col cols=&quot;12&quot; md=&quot;6&quot;&gt;
+          &lt;v-select
+            v-model=&quot;filters.employee&quot;
+            :items=&quot;employeeChoices&quot;
+            label=&quot;Search by employee&quot;
+            item-value=&quot;id&quot;
+            item-title=&quot;name&quot;
+            clearable
+          &gt;&lt;/v-select&gt;
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+
+      &lt;v-row&gt;
+        &lt;v-col
+          cols=&quot;12&quot;
+          md=&quot;6&quot;
+          v-for=&quot;crew in paginatedCrews&quot;
+          :key=&quot;crew.id&quot;
+        &gt;
+          &lt;v-card class=&quot;mb-6&quot; elevation=&quot;2&quot;&gt;
+            &lt;v-card-title&gt;
+              Crew {{ crew.id }}
+            &lt;/v-card-title&gt;
+            &lt;v-divider&gt;&lt;/v-divider&gt;
+            &lt;v-card-text&gt;
+              &lt;p&gt;&lt;strong&gt;Captain:&lt;/strong&gt; {{ crew.captain.employee.first_name }} {{ crew.captain.employee.last_name }} ({{ crew.captain.employee.work_experience_years }} years of exp)&lt;/p&gt;
+              &lt;v-divider class=&quot;my-2&quot;&gt;&lt;/v-divider&gt;
+              &lt;p&gt;&lt;strong&gt;Co-pilot:&lt;/strong&gt; {{ crew.co_pilot.employee.first_name }} {{ crew.co_pilot.employee.last_name }} ({{ crew.co_pilot.employee.work_experience_years }} years of exp)&lt;/p&gt;
+              &lt;v-divider class=&quot;my-2&quot;&gt;&lt;/v-divider&gt;
+              &lt;p&gt;&lt;strong&gt;Navigator:&lt;/strong&gt; {{ crew.navigator.employee.first_name }} {{ crew.navigator.employee.last_name }} ({{ crew.navigator.employee.work_experience_years }} years of exp)&lt;/p&gt;
+              &lt;v-divider class=&quot;my-2&quot;&gt;&lt;/v-divider&gt;
+              &lt;p&gt;&lt;strong&gt;Stewards:&lt;/strong&gt;&lt;/p&gt;
+              &lt;ul class=&quot;stops-list&quot;&gt;
+                &lt;li
+                  v-for=&quot;attendant in crew.attendants&quot;
+                  :key=&quot;attendant.employee.first_name + attendant.employee.last_name&quot;
+                &gt;
+                  {{ attendant.employee.first_name }} {{ attendant.employee.last_name }} ({{ attendant.employee.work_experience_years }} years of exp)
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/v-card-text&gt;
+          &lt;/v-card&gt;
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+
+      &lt;v-row&gt;
+        &lt;v-col cols=&quot;12&quot; class=&quot;d-flex justify-center&quot;&gt;
+          &lt;v-pagination
+            v-model=&quot;currentPage&quot;
+            :length=&quot;totalPages&quot;
+            :total-visible=&quot;5&quot;
+          &gt;&lt;/v-pagination&gt;
+        &lt;/v-col&gt;
+      &lt;/v-row&gt;
+    &lt;/v-container&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+  import apiClient from &quot;@/services/api&quot;;
+
+  export default {
+    data() {
+      return {
+        crews: [],
+        filters: {
+          employee: null,
+        },
+        employeeChoices: [],
+        currentPage: 1,
+        itemsPerPage: 6,
+      };
+    },
+    computed: {
+      filteredCrews() {
+        if (!this.filters.employee) {
+          return this.crews;
+        }
+
+        return this.crews.filter((crew) =&gt;
+          [crew.captain, crew.co_pilot, crew.navigator, ...crew.attendants]
+            .map((member) =&gt; member.employee.id)
+            .includes(this.filters.employee)
+        );
+
+      },
+      paginatedCrews() {
+        const start = (this.currentPage - 1) * this.itemsPerPage;
+        const end = start + this.itemsPerPage;
+        return this.filteredCrews.slice(start, end);
+      },
+      totalPages() {
+        return Math.ceil(this.filteredCrews.length / this.itemsPerPage);
+      },
+    },
+    methods: {
+      async fetchCrews() {
+        try {
+          const response = await apiClient.get(&quot;/crews/&quot;);
+          this.crews = response.data;
+        } catch (error) {
+          console.error(&quot;Crews loading error:&quot;, error.response?.data || error.message);
+          alert(&quot;Crews loading error.&quot;);
+        }
+      },
+      async fetchEmployees() {
+        try {
+          const response = await apiClient.get(&quot;/employees/&quot;);
+          this.employeeChoices = response.data.map((employee) =&gt; ({
+            id: employee.id,
+            name: `${employee.first_name} ${employee.last_name}`,
+          }));
+        } catch (error) {
+          console.error(&quot;Employee list loading error:&quot;, error.response?.data || error.message);
+          alert(&quot;Employee list loading error.&quot;);
+        }
+      },
+    },
+    async created() {
+      await Promise.all([this.fetchCrews(), this.fetchEmployees()]);
+    },
+  };
+  &lt;/script&gt;
+
+  &lt;style scoped&gt;
+  .text-center {
+    text-align: center;
+  }
+  .v-card-title {
+    font-weight: bold;
+  }
+  .v-card-text p {
+    margin: 4px 0;
+  }
+
+
+  &lt;/style&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
